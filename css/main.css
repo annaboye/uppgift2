@@ -1,0 +1,49 @@
+.startpage {
+  height: 100vh;
+  color: white;
+  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.startpage__menu {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100 vw;
+  background-color: rgba(255, 255, 255, 0.14);
+}
+.startpage__menu ul {
+  display: flex;
+  list-style-type: none;
+}
+.startpage__menu ul a {
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+.startpage__menu ul a:hover {
+  text-decoration: underline;
+}
+.startpage__box {
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.startpage__arrow {
+  height: 10vh;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
