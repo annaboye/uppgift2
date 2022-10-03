@@ -35,6 +35,11 @@
     align-items: center;
   }
   &__arrow {
+    display: flex;
+    justify-content: center;
     height: 10vh;
+    a {
+      color: var.$primarycolor;
+    }
   }
 }

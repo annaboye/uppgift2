@@ -33,7 +33,12 @@
   align-items: center;
 }
 .startpage__arrow {
+  display: flex;
+  justify-content: center;
   height: 10vh;
+}
+.startpage__arrow a {
+  color: white;
 }
 
 html {
@@ -44,6 +49,74 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.about__box {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 700px) {
+  .about__box {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__box {
+    width: 600px;
+  }
+}
+.about__box h3 {
+  text-align: center;
+  width: 100pc;
+}
+.about__box .image_container {
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about__box .image_container img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+.about__box article {
+  width: 350px;
+  background-color: lightgrey;
+  border-radius: 15px;
+}
+.about__box article p {
+  padding: 5px;
+}
+.about__box article p i {
+  font-size: 3em;
+}
+
+.about__arrow {
+  text-align: center;
+  padding: 10px;
+}
+.about__arrow i {
+  color: black;
+}
+@media screen and (min-width: 1200px) {
+  .about__arrow {
+    width: 100vw;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

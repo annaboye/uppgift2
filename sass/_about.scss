@@ -1,0 +1,68 @@
+@use "variables" as var;
+@use "mixins";
+
+h2 {
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include mixins.tablet {
+      width: 50vw;
+    }
+    @include mixins.desktop {
+      width: 600px;
+    }
+
+    h3 {
+      text-align: center;
+      width: 100pc;
+    }
+
+    .image_container {
+      width: 350px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+      }
+    }
+    article {
+      width: 350px;
+      background-color: lightgrey;
+      border-radius: 15px;
+      p {
+        padding: 5px;
+        i {
+          font-size: 3em;
+        }
+      }
+    }
+  }
+}
+
+.about__arrow {
+  text-align: center;
+  padding: 10px;
+  i {
+    color: black;
+  }
+  @include mixins.desktop {
+    width: 100vw;
+  }
+}
