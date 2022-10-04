@@ -14,7 +14,7 @@ h2 {
 
   &__box {
     height: 80vh;
-    width: 100vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -40,15 +40,19 @@ h2 {
         width: 300px;
         height: 300px;
         border-radius: 50%;
+        box-shadow: 0px 5px 15px rgba(174, 173, 173, 0.784);
       }
     }
     article {
       width: 350px;
       background-color: lightgrey;
       border-radius: 15px;
+      gap: 10px;
       p {
         padding: 5px;
         i {
+          display: inline-block;
+          transform: rotate(180deg);
           font-size: 3em;
         }
       }
@@ -57,12 +61,10 @@ h2 {
 }
 
 .about__arrow {
+  width: 100vw;
   text-align: center;
   padding: 10px;
   i {
-    color: black;
-  }
-  @include mixins.desktop {
-    width: 100vw;
+    color: var.$secondarycolor;
   }
 }

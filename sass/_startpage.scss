@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "mixins";
+@use "nav";
 
 .startpage {
   height: 100vh;
@@ -7,28 +8,9 @@
   background-image: url(/assets/negative-space-black-forest-dawn.jpg);
   background-size: cover;
   background-position: center;
-  &__menu {
-    height: 10vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100 vw;
-    background-color: rgba(255, 255, 255, 0.14);
-    ul {
-      display: flex;
-      list-style-type: none;
-      a {
-        color: var.$primarycolor;
-        padding: 5px;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
+
   &__box {
-    height: 80vh;
+    height: 90vh;
     text-align: center;
     display: flex;
     justify-content: center;

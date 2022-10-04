@@ -1,0 +1,27 @@
+@use "variables" as var;
+@use "mixins";
+
+.contact {
+  height: 100vh;
+  background-color: var.$secondarycolor;
+  padding-left: 70px;
+  @include mixins.desktop {
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  ul {
+    font-size: 1.5em;
+    padding: 10px;
+    list-style-type: none;
+    color: var.$primarycolor;
+    li {
+      padding: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: var.$primarycolor;
+    }
+  }
+}
