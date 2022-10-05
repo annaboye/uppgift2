@@ -1,32 +1,164 @@
-a {
+.startpage {
+  padding: 0;
+  height: 100vh;
+  color: white;
+  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.startpage__box {
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 15px;
+}
+.startpage__box h1 {
+  font-size: 1.5em;
+}
+.startpage__arrow {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+}
+.startpage__arrow a {
+  color: white;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", arial, serif;
+  font-size: 14pt;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  #about {
+    justify-content: space-around;
+  }
+}
+
+.member {
+  height: 80vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .member {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .member {
+    width: 600px;
+  }
+}
+.member__name {
+  text-align: center;
+  width: 100pc;
+}
+.member__imagebox {
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.member__imagebox img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px rgba(174, 173, 173, 0.784);
+}
+.member__info {
+  width: 400px;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+.member__info p {
+  margin: 15px;
+}
+.member__info p i {
+  display: inline-block;
+  transform: rotate(180deg);
+  font-size: 3em;
+}
+
+.about__arrow {
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+}
+.about__arrow i {
+  color: black;
+}
+
+.contact {
+  height: 100vh;
+  background-color: black;
+  padding-left: 70px;
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    padding: 0;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.contact ul {
+  font-size: 1.2em;
+  padding: 10px;
+  list-style-type: none;
+  color: white;
+}
+.contact ul li {
+  padding: 10px;
+}
+.contact ul a {
+  text-decoration: none;
   color: white;
 }
 
 .header {
   position: absolute;
-  display: flex;
-  flex-direction: column;
   background-color: rgba(231, 223, 223, 0.3);
   width: 100%;
 }
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
-.header ul a {
+.header a {
+  color: white;
   display: block;
   padding: 5px;
   text-decoration: none;
 }
 @media screen and (min-width: 1200px) {
-  .header ul a {
+  .header a {
     padding: 20px 30px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .header ul a:hover {
+  .header a:hover {
     text-decoration: underline;
   }
 }
@@ -38,6 +170,10 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
 }
 @media screen and (min-width: 1200px) {
   .menu {
@@ -60,32 +196,36 @@ a {
     display: none;
   }
 }
-.menu-icon .nav-icon {
+
+.nav-icon {
   background: white;
   display: block;
-  height: 2px;
-  width: 18px;
+  height: 3px;
+  width: 25px;
+  border-radius: 15px;
   position: relative;
   transition: background 0.2s ease-out;
 }
-.menu-icon .nav-icon::before {
+.nav-icon::before {
   background: white;
   content: "";
   display: block;
   height: 100%;
   width: 100%;
+  border-radius: 15px;
   position: absolute;
-  top: 5px;
+  top: 8px;
   transition: all 0.2 ease-out;
 }
-.menu-icon .nav-icon::after {
+.nav-icon::after {
   background: white;
   content: "";
   display: block;
   height: 100%;
   width: 100%;
+  border-radius: 15px;
   position: absolute;
-  top: -5px;
+  top: -8px;
   transition: all 0.2 ease-out;
 }
 
@@ -105,133 +245,6 @@ a {
 .menu-btn:checked ~ .menu-icon .nav-icon::after {
   transform: rotate(45deg);
   top: 0;
-}
-
-.startpage {
-  height: 100vh;
-  color: white;
-  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.startpage__box {
-  height: 90vh;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.startpage__arrow {
-  display: flex;
-  justify-content: center;
-  height: 10vh;
-}
-.startpage__arrow a {
-  color: white;
-}
-
-html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  text-align: center;
-}
-
-.about {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.about__box {
-  height: 80vh;
-  width: 90vw;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 700px) {
-  .about__box {
-    width: 50vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .about__box {
-    width: 600px;
-  }
-}
-.about__box h3 {
-  text-align: center;
-  width: 100pc;
-}
-.about__box .image_container {
-  width: 350px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.about__box .image_container img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  box-shadow: 0px 5px 15px rgba(174, 173, 173, 0.784);
-}
-.about__box article {
-  width: 350px;
-  background-color: lightgrey;
-  border-radius: 15px;
-  gap: 10px;
-}
-.about__box article p {
-  padding: 5px;
-}
-.about__box article p i {
-  display: inline-block;
-  transform: rotate(180deg);
-  font-size: 3em;
-}
-
-.about__arrow {
-  width: 100vw;
-  text-align: center;
-  padding: 10px;
-}
-.about__arrow i {
-  color: black;
-}
-
-.contact {
-  height: 100vh;
-  background-color: black;
-  padding-left: 70px;
-}
-@media screen and (min-width: 1200px) {
-  .contact {
-    height: 30vh;
-    display: flex;
-    justify-content: space-around;
-  }
-}
-.contact ul {
-  font-size: 1.5em;
-  padding: 10px;
-  list-style-type: none;
-  color: white;
-}
-.contact ul li {
-  padding: 10px;
-}
-.contact ul a {
-  text-decoration: none;
-  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,5 @@
 @mixin tablet {
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
@@ -8,4 +8,9 @@
   @media screen and (min-width: 1200px) {
     @content;
   }
+}
+@mixin arrow {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
 }

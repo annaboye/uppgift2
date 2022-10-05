@@ -1,8 +1,8 @@
 @use "variables" as var;
 @use "mixins";
-@use "nav";
 
 .startpage {
+  padding: 0;
   height: 100vh;
   color: var.$primarycolor;
   background-image: url(/assets/negative-space-black-forest-dawn.jpg);
@@ -15,11 +15,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
+    padding: 15px;
+    h1 {
+      font-size: 1.5em;
+    }
   }
   &__arrow {
-    display: flex;
-    justify-content: center;
-    height: 10vh;
+    @include mixins.arrow;
+
     a {
       color: var.$primarycolor;
     }

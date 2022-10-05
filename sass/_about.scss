@@ -5,56 +5,59 @@ h2 {
   text-align: center;
 }
 
-.about {
+#about {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @include mixins.tablet {
+    justify-content: space-around;
+  }
+}
 
-  &__box {
-    height: 80vh;
-    width: 90vw;
+.member {
+  height: 80vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include mixins.tablet {
+    width: 500px;
+  }
+  @include mixins.desktop {
+    width: 600px;
+  }
+
+  &__name {
+    text-align: center;
+    width: 100pc;
+  }
+
+  &__imagebox {
+    width: 350px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    @include mixins.tablet {
-      width: 50vw;
-    }
-    @include mixins.desktop {
-      width: 600px;
-    }
+    justify-content: center;
 
-    h3 {
-      text-align: center;
-      width: 100pc;
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      box-shadow: 0px 5px 15px rgba(174, 173, 173, 0.784);
     }
+  }
+  &__info {
+    width: 400px;
+    background-color: lightgrey;
+    border-radius: 10px;
 
-    .image_container {
-      width: 350px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      img {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        box-shadow: 0px 5px 15px rgba(174, 173, 173, 0.784);
-      }
-    }
-    article {
-      width: 350px;
-      background-color: lightgrey;
-      border-radius: 15px;
-      gap: 10px;
-      p {
-        padding: 5px;
-        i {
-          display: inline-block;
-          transform: rotate(180deg);
-          font-size: 3em;
-        }
+    p {
+      margin: 15px;
+      i {
+        display: inline-block;
+        transform: rotate(180deg);
+        font-size: 3em;
       }
     }
   }
@@ -62,8 +65,8 @@ h2 {
 
 .about__arrow {
   width: 100vw;
-  text-align: center;
-  padding: 10px;
+  align-items: center;
+  @include mixins.arrow;
   i {
     color: var.$secondarycolor;
   }
