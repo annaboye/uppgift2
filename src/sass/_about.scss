@@ -1,10 +1,6 @@
 @use "variables" as var;
 @use "mixins";
 
-h2 {
-  text-align: center;
-}
-
 #about {
   display: flex;
   flex-wrap: wrap;
@@ -15,31 +11,37 @@ h2 {
     flex-direction: row;
     justify-content: space-around;
   }
+  h2 {
+    position: relative;
+    top: 25px;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .member {
-  height: 80vh;
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: 80vh;
+  width: 100%;
 
   @include mixins.desktop {
     width: 50%;
   }
 
   &__name {
+    position: relative;
     text-align: center;
-
     width: 100%;
-    margin-bottom: 0;
+    top: 40px;
   }
 
   &__imagebox {
-    width: 100%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    display: flex;
 
     img {
       width: 250px;
@@ -56,6 +58,7 @@ h2 {
     width: 300px;
     background-color: lightgrey;
     border-radius: 10px;
+    font-size: 0.8em;
     @include mixins.tablet {
       width: 400px;
     }
