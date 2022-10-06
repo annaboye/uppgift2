@@ -42,8 +42,8 @@ h2 {
     justify-content: center;
 
     img {
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       box-shadow: 0px 5px 15px rgba(174, 173, 173, 0.784);
     }
@@ -69,9 +69,8 @@ h2 {
 }
 
 .about__arrow {
-  align-items: center;
   @include mixins.arrow;
-  i {
+  a {
     color: var.$secondarycolor;
   }
 }
