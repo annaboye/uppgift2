@@ -2,10 +2,10 @@
 @use "mixins";
 
 .contact {
-  height: 100vh;
+  height: 80vh;
   background-color: var.$secondarycolor;
   padding-left: 70px;
-  @include mixins.desktop {
+  @include mixins.tablet {
     padding: 0;
     height: 30vh;
     display: flex;

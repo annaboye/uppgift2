@@ -5,7 +5,7 @@
   padding: 0;
   height: 100vh;
   color: var.$primarycolor;
-  background-image: url(/assets/negative-space-black-forest-dawn.jpg);
+  background-image: url(/src/assets/negative-space-black-forest-dawn.jpg);
   background-size: cover;
   background-position: center;
 
@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    padding: 15px;
+
     h1 {
       font-size: 1.5em;
     }
