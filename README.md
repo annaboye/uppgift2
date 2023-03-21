@@ -1,2 +1,2 @@
 # uppgift2
-The task was to mimic as close as possible to a finished design.
+This was a task in the course "HTML and CSS" at Medieinstitutet. The task was to mimic as close as possible to a finished design.
